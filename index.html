@@ -1,9 +1,56 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Password Generator</title>
+    <title>Free Secure Password Generator | Create Strong Passwords</title>
+    <meta name="description" content="Create strong, unique passwords instantly with this free secure password generator. Customize length, letters, numbers, symbols, and vowels—nothing is stored.">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Ramansa">
+    <link rel="canonical" href="https://password.ramansa.com/">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://password.ramansa.com/">
+    <meta property="og:title" content="Free Secure Password Generator">
+    <meta property="og:description" content="Generate a strong, unique password and customize its length and character types in seconds.">
+    <meta property="og:site_name" content="Password Generator">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Free Secure Password Generator">
+    <meta name="twitter:description" content="Generate a strong, unique password and customize its length and character types in seconds.">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebApplication",
+          "name": "Password Generator",
+          "url": "https://password.ramansa.com/",
+          "applicationCategory": "UtilitiesApplication",
+          "operatingSystem": "Any",
+          "description": "A free browser-based tool for creating customizable strong passwords."
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "How do I create a strong password?",
+              "acceptedAnswer": { "@type": "Answer", "text": "Use a long, unique password with a mix of uppercase and lowercase letters, numbers, and symbols. A password manager can help you create and save a different password for every account." }
+            },
+            {
+              "@type": "Question",
+              "name": "Are generated passwords stored?",
+              "acceptedAnswer": { "@type": "Answer", "text": "No. Passwords are generated in your browser and are not sent to or stored by this website." }
+            },
+            {
+              "@type": "Question",
+              "name": "What password length should I use?",
+              "acceptedAnswer": { "@type": "Answer", "text": "Use the longest password an account allows. For most accounts, 16 characters or more is a strong practical default." }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         /* Custom scrollbar and slider styling */
@@ -34,23 +81,25 @@
         }
     </style>
 </head>
-<body class="bg-slate-950 text-slate-200 flex items-center justify-center min-h-screen p-4 font-sans selection:bg-emerald-500 selection:text-white">
+<body class="bg-slate-950 text-slate-200 min-h-screen p-4 font-sans selection:bg-emerald-500 selection:text-white">
 
     <!-- Toast Notification -->
     <div id="toast" class="fixed top-5 left-1/2 transform -translate-x-1/2 bg-emerald-500 text-white px-6 py-3 rounded-full shadow-lg font-medium transition-all duration-300 pointer-events-none z-50 toast-exit">
         Copied to clipboard!
     </div>
 
+    <main class="mx-auto flex min-h-screen w-full max-w-5xl flex-col items-center justify-center gap-10 py-8">
     <!-- Main Card -->
-    <div class="bg-slate-900 border border-slate-800 rounded-3xl shadow-2xl p-6 md:p-8 w-full max-w-lg relative overflow-hidden">
+    <section aria-labelledby="page-title" class="bg-slate-900 border border-slate-800 rounded-3xl shadow-2xl p-6 md:p-8 w-full max-w-lg relative overflow-hidden">
         
         <!-- Background Glow -->
         <div class="absolute top-0 left-1/2 transform -translate-x-1/2 w-[120%] h-32 bg-emerald-500/10 blur-3xl rounded-full pointer-events-none"></div>
 
-        <h1 class="text-2xl font-bold mb-6 text-center text-white flex items-center justify-center gap-2">
+        <h1 id="page-title" class="text-2xl font-bold mb-2 text-center text-white flex items-center justify-center gap-2">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-emerald-500"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-            Password Generator
+            Free Secure Password Generator
         </h1>
+        <p class="mb-6 text-center text-sm leading-6 text-slate-400">Create a unique, customizable password instantly. Your password is generated locally in your browser.</p>
 
         <!-- Password Display Area -->
         <div class="bg-slate-950/50 border border-slate-700/50 rounded-2xl p-4 mb-6 relative group hover:border-emerald-500/50 transition-colors">
@@ -161,7 +210,43 @@
                 Generate Password
             </button>
         </div>
-    </div>
+    </section>
+
+    <section aria-labelledby="password-guide-title" class="w-full max-w-3xl rounded-3xl border border-slate-800 bg-slate-900/60 p-6 md:p-8">
+        <h2 id="password-guide-title" class="text-2xl font-bold text-white">Create stronger passwords for every account</h2>
+        <p class="mt-3 leading-7 text-slate-400">A strong password is long, unique, and difficult to guess. Use this password generator to make a new password for each account, then save it in a trusted password manager. Avoid reusing passwords or relying on personal information.</p>
+        <div class="mt-6 grid gap-4 md:grid-cols-3">
+            <article class="rounded-2xl border border-slate-800 bg-slate-950/50 p-4">
+                <h3 class="font-semibold text-emerald-400">Make it long</h3>
+                <p class="mt-2 text-sm leading-6 text-slate-400">Choose 16 characters or more whenever a website permits it.</p>
+            </article>
+            <article class="rounded-2xl border border-slate-800 bg-slate-950/50 p-4">
+                <h3 class="font-semibold text-emerald-400">Mix character types</h3>
+                <p class="mt-2 text-sm leading-6 text-slate-400">Include letters, numbers, and symbols to increase password complexity.</p>
+            </article>
+            <article class="rounded-2xl border border-slate-800 bg-slate-950/50 p-4">
+                <h3 class="font-semibold text-emerald-400">Keep it unique</h3>
+                <p class="mt-2 text-sm leading-6 text-slate-400">Never reuse a password; one compromised account should not expose others.</p>
+            </article>
+        </div>
+
+        <h2 class="mt-8 text-xl font-bold text-white">Password generator FAQ</h2>
+        <div class="mt-4 space-y-4">
+            <details class="rounded-xl border border-slate-800 bg-slate-950/50 p-4">
+                <summary class="cursor-pointer font-semibold text-slate-200">How do I create a strong password?</summary>
+                <p class="mt-3 text-sm leading-6 text-slate-400">Generate a long password with a mix of character types, make it unique to one account, and store it in a password manager.</p>
+            </details>
+            <details class="rounded-xl border border-slate-800 bg-slate-950/50 p-4">
+                <summary class="cursor-pointer font-semibold text-slate-200">Are generated passwords stored?</summary>
+                <p class="mt-3 text-sm leading-6 text-slate-400">No. This tool generates passwords in your browser. It does not save or transmit the passwords you create.</p>
+            </details>
+            <details class="rounded-xl border border-slate-800 bg-slate-950/50 p-4">
+                <summary class="cursor-pointer font-semibold text-slate-200">What password length should I use?</summary>
+                <p class="mt-3 text-sm leading-6 text-slate-400">Use the longest password an account allows. For most accounts, 16 characters or more is a strong practical default.</p>
+            </details>
+        </div>
+    </section>
+    </main>
 
     <script>
         // DOM Elements
